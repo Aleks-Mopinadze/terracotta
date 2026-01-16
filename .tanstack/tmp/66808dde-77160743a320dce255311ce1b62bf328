@@ -1,0 +1,14 @@
+import {createFileRoute, Link, Outlet} from '@tanstack/react-router'
+
+export const Route = createFileRoute('/auth/_layout')({
+  component: RouteComponent,
+})
+
+function RouteComponent() {
+  console.log('layout')
+  return <div>
+    <Link to={'/auth/login'}>Login</Link>
+    <Link to={'/auth/signup'}>Login</Link>
+    <Outlet/>
+  </div>
+}
