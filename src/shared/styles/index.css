@@ -1,0 +1,17 @@
+@import "reset.css";
+@import "spacing.css";
+@import "pallete.css";
+@import "fonts.css";
+
+
+body {
+    font-size: var(--space-16);
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: var(--font-weight-regular);
+
+    line-height: 1.5;
+
+    color: var(--primary-text);
+
+}
