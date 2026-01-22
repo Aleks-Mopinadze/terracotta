@@ -1,0 +1,129 @@
+.header {
+    backdrop-filter: blur(70px);
+    background-color: var(--primary);
+    padding: 20px 0;
+}
+
+.burger {
+    margin-left: auto;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.actions {
+    display: none;
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.headerLogoLink {
+    display: block;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+    &::after {
+        content: 'Terracotta';
+        position: absolute;
+        top: 4px;
+        right: -93px;
+        z-index: 1;
+        font-family: 'AnekKannada', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--secondary-text);;
+        display: block;
+    }
+    &&::before {
+        content: 'Handcrafted Pottery Studio';
+        font-family: 'KumbhSans', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        color: var(--secondary-text);
+        position: absolute;
+        top: 27px;
+        z-index: 1;
+        right: -132px;
+        display: block;
+    }
+
+}
+
+.navigation {
+    display: none;
+}
+
+
+@media (--md-up) {
+    .navigation {
+        display: block;
+        margin-left: 200px;
+    }
+
+    .navItems {
+        display: flex;
+        max-width: 362px;
+        font-size: 15px;
+        color: #fffaf5;
+
+    }
+
+    .navItem {
+        margin-left: 45px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .navLink {
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .burger {
+        display: none;
+    }
+
+    .actions {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .cart {
+        margin-right: 15px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .favorites {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (--xl-up) {
+    margin-left: 280px;
+}
+
+
+
+
+
+
+
