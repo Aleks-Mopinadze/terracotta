@@ -4,12 +4,14 @@ import tanstackRouter from "@tanstack/router-plugin/vite";
 import globalData from "@csstools/postcss-global-data"
 import postcssPresetEnv from "postcss-preset-env"
 import autoprefixer from "autoprefixer"
+import vitePluginSvgr from "vite-plugin-svgr";
 
 
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+      vitePluginSvgr(),
       tanstackRouter({
         target: 'react',
         autoCodeSplitting: true

@@ -1,0 +1,225 @@
+.footer {
+    background-color: var(--primary);
+    padding: 15px 0;
+    color: var(--secondary-text);
+    font-size: 11px;
+}
+
+.wrapper {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo {
+    grid-column: 1/3;
+    justify-self: start;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    position: relative;
+
+    &::after {
+        content: 'Terracotta';
+        position: absolute;
+        top: 4px;
+        right: -120px;
+        z-index: 1;
+        font-family: 'AnekKannada', sans-serif;
+        font-weight: 600;
+        font-size: 26px;
+        color: var(--secondary-text);;
+        display: block;
+    }
+    &&::before {
+        content: 'Handcrafted Pottery Studio';
+        font-family: 'KumbhSans', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: var(--secondary-text);
+        position: absolute;
+        top: 32px;
+        z-index: 1;
+        right: -170px;
+        display: block;
+    }
+
+}
+
+.logoText {
+    display: none;
+}
+
+.navigation {
+    grid-column: 1/4;
+    border-top: 1px solid var(--primary-disabled);
+    margin-top: 15px;
+
+}
+
+.navList {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.navLink {
+    font-weight: 500;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.contacts {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    line-height: 140%;
+
+    border-top: 1px solid var(--primary-disabled);
+    border-bottom: 1px solid var(--primary-disabled);
+}
+
+.contactsItem {
+    display: flex;
+    align-items: center;
+}
+
+.contactLink {
+    font-weight: 400;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.contactsIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.socials {
+    grid-row: 1/1;
+    grid-column: 3/4;
+    justify-self: end;
+}
+
+.socialsItem {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 8px;
+}
+
+.footerText {
+    grid-column: 1/4;
+    padding: 16px 0;
+}
+
+@media (--sm-up) {
+    .contacts {
+        justify-content: space-evenly;
+    }
+
+    .navList {
+        justify-content: space-evenly;
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+    }
+    .socialsItem {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .footerText {
+        text-align: center;
+    }
+}
+
+@media (--lg-up) {
+    .footer {
+        padding: 40px 0;
+        font-size: 15px;
+    }
+
+    .wrapper {
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .logo {
+        grid-column: 1/3;
+        align-self: start;
+    }
+
+    .navigation {
+        grid-column: 3/4;
+        border: 0;
+        margin-top: 0;
+        align-self: start;
+    }
+    .navList {
+        display: block;
+        padding: 0;
+    }
+    .navListItem {
+        margin-bottom: 10px;
+    }
+
+    .navLink{
+        font-weight: 300;
+        line-height: 175%;
+    }
+
+    .contacts {
+        padding: 0;
+        grid-column: 4/6;
+        border: 0;
+        display: block;
+        align-self: start;
+
+        font-weight: 300;
+        line-height: 175%;
+    }
+
+    .contactsItem {
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .contactsIcon {
+        width: 30px;
+        height: 30px;
+    }
+    .socials {
+        grid-column: 6/7;
+        display: block;
+    }
+
+    .socialsItem {
+        margin-bottom: 20px;
+    }
+
+
+    .footerText {
+        display: none;
+    }
+
+    .logoText {
+        margin-top: 13px;
+        display: block;
+        width: 215px;
+        font-size: 12px;
+        
+    }
+
+}

@@ -2,7 +2,6 @@ import type {ComponentProps, ReactNode} from "react";
 import type {LinkProps} from "@tanstack/react-router";
 
 
-
 export type ButtonVariant = 'primary' | 'secondary' | 'transparent';
 
 export interface CommonButtonProps {
