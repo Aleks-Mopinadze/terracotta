@@ -8,11 +8,11 @@ import styles from './Button.module.css'
 
 export const Button: React.FC<ButtonProps> =
     ({
-        variant = DEFAULT_VARIANT,
-        icon,
-        className,
-        children,
-        ...props
+         variant = DEFAULT_VARIANT,
+         icon,
+         className,
+         children,
+         ...props
      }) => {
 
     const classes = clsx(styles.button, styles[variant], className);

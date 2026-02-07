@@ -22,7 +22,8 @@
     "clsx": "^2.1.1",
     "eslint-plugin-react": "^7.37.5",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "vite-plugin-svgr": "^4.5.0"
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^4.0.0",
