@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 import tanstackRouter from "@tanstack/router-plugin/vite";
 import globalData from "@csstools/postcss-global-data"
@@ -7,33 +7,34 @@ import autoprefixer from "autoprefixer"
 import vitePluginSvgr from "vite-plugin-svgr";
 
 
-
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-      vitePluginSvgr(),
-      tanstackRouter({
-        target: 'react',
-        autoCodeSplitting: true
-      }),
-      react()
-  ],
+    plugins: [
+        vitePluginSvgr(),
+        tanstackRouter({
+            target: 'react',
+            autoCodeSplitting: true,
+            routesDirectory: './src/app/routes',
+            generatedRouteTree: './src/routeTree.gen.ts'
+        }),
+        react()
+    ],
     css: {
-      postcss: {
-          plugins: [
-              globalData({
-                  files: [
-                      'src/shared/styles/breakpoints.css'
-                  ]
-              }),
-              postcssPresetEnv({
-                  stage: 3,
-                  features: {
-                      'custom-media-queries': true,
-                  }
-              }),
-              autoprefixer()
-          ]
-      }
+        postcss: {
+            plugins: [
+                globalData({
+                    files: [
+                        'src/shared/styles/breakpoints.css'
+                    ]
+                }),
+                postcssPresetEnv({
+                    stage: 3,
+                    features: {
+                        'custom-media-queries': true,
+                    }
+                }),
+                autoprefixer()
+            ]
+        }
     }
 })
