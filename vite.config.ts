@@ -5,10 +5,15 @@ import globalData from "@csstools/postcss-global-data"
 import postcssPresetEnv from "postcss-preset-env"
 import autoprefixer from "autoprefixer"
 import vitePluginSvgr from "vite-plugin-svgr";
-
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+    resolve: {
+      alias: {
+          '@': path.resolve(__dirname, './src'),
+      }
+    },
     plugins: [
         vitePluginSvgr(),
         tanstackRouter({
@@ -24,7 +29,7 @@ export default defineConfig({
             plugins: [
                 globalData({
                     files: [
-                        'src/shared/styles/breakpoints.css'
+                        'src/app/styles/breakpoints.css'
                     ]
                 }),
                 postcssPresetEnv({

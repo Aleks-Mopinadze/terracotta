@@ -6,7 +6,10 @@
     box-sizing: border-box;
     height: 40px;
     padding: 5px 34px;
-    width: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 

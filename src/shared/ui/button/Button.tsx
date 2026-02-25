@@ -1,5 +1,5 @@
-import type {ButtonProps} from "../types";
-import {DEFAULT_VARIANT} from "../constants";
+import type {ButtonProps} from "./types";
+import {DEFAULT_VARIANT} from "./constants";
 import { Link } from "@tanstack/react-router";
 import clsx from "clsx";
 

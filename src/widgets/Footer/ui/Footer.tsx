@@ -1,6 +1,6 @@
 import styles from './Footer.module.css'
 import {Link} from "@tanstack/react-router";
-import {Facebook, Mail, Phone, Telegram, Vk} from "../Icons";
+import {Facebook, Mail, Phone, Telegram, Vk} from "@/shared/assets";
 
 
 export const Footer = () => {
